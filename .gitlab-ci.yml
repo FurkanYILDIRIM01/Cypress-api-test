@@ -1,0 +1,9 @@
+stages:
+  - cypress-api-test-run
+
+cypress-test-api-prod:
+  image: cypress/browsers:node16.16.0-chrome107-ff107-edge
+  stage: cypress-api-test-run
+  script: 
+    - npm install cypress
+    - npx cypress run --record --key d4ea2a40-ed8a-4707-9c3c-949997c19328
